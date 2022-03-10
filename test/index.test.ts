@@ -27,9 +27,8 @@ const BAD_CODE_CASES = [
 rules.run('no-variables', plugin.rules['no-variables'], {
 	valid: GOOD_CODE_CASES.map(code => ({code})),
 
-	invalid: BAD_CODE_CASES.map((code, index) => ({
+	invalid: BAD_CODE_CASES.map(code => ({
 		code,
-		output: GOOD_CODE_CASES[index],
 		errors: [
 			{
 				message: NO_VARIABLES,
